@@ -7,7 +7,7 @@ import io
 from PIL import Image, ImageFont, ImageDraw
 import asyncio
 from discord import Activity, ActivityType
-
+import os
 
 #ODQ3MDI2NDI1MTg1Njk3Nzky.YK4E1A.Zb0X5-Y4FlOK7rKSwURT6bqG1oU
 PREFIX = '.'
@@ -262,5 +262,5 @@ async def user_slave(ctx, member: discord.Member):
     slave_role = discord.utils.get(ctx.message.guild.roles, name = 'fucking slave' )
     await member.add_roles(slave_role)
     await ctx.send(f'{member.mention}, стал - "fucking slave"!')
-
-bot.run('ODQ3MDI2NDI1MTg1Njk3Nzky.YK4E1A.Zb0X5-Y4FlOK7rKSwURT6bqG1oU')
+token = os.environ.get('BOT_TOKEN')
+bot.run(str(token))
