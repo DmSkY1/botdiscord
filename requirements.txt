@@ -1,0 +1,9 @@
+discord.py
+aiohttp
+wedsockets
+chardet
+datetime
+io
+Pillow
+asyncio
+requests
